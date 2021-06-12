@@ -7,3 +7,14 @@ camera.position.set(0,0,100);
 camera.lookAt(0,0,0);
 
 const scene = new THREE.Scene();
+
+//Define a material, for lines LineBasicMaterial/LineDashedMaterial are used
+const material = new THREE.LineBasicMaterial({color: 0x0000ff});
+
+//Adding a geometry with some vertices
+const points = [];
+points.push(new THREE.Vector3(10,0,0));
+points.push(new THREE.Vector3(0,10,0));
+points.push(new THREE.Vector3(10,0,0));
+
+const geometry = new THREE.BufferGeometry().setFromPoints(points);
