@@ -22,5 +22,13 @@ scene.add(cube);
 //To avoid the cube and camera inside each other we then move the camera out a bit 
 camera.position.z = 5;
 
+//Creating a render/animate loop
+//Creates a renderer to draw the scene every time the screen is refreshed
+//It pauses when the user navigates to another browser tab rather than setInterval()
+function animate(){
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+animate();
 
 
